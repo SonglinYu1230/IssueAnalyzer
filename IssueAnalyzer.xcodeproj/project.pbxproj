@@ -13,6 +13,8 @@
 		9AA1C02B21135EA70051E073 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C02A21135EA70051E073 /* main.m */; };
 		9AA1C03621135EA80051E073 /* IssueAnalyzerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C03521135EA80051E073 /* IssueAnalyzerTests.m */; };
 		9AA1C04121135EA80051E073 /* IssueAnalyzerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C04021135EA80051E073 /* IssueAnalyzerUITests.m */; };
+		9AA1C0522113630F0051E073 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C0502113630F0051E073 /* MainWindowController.m */; };
+		9AA1C0532113630F0051E073 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA1C0512113630F0051E073 /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		9AA1C03C21135EA80051E073 /* IssueAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IssueAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA1C04021135EA80051E073 /* IssueAnalyzerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IssueAnalyzerUITests.m; sourceTree = "<group>"; };
 		9AA1C04221135EA80051E073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA1C04F2113630F0051E073 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		9AA1C0502113630F0051E073 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		9AA1C0512113630F0051E073 /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +102,7 @@
 		9AA1C02021135EA60051E073 /* IssueAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				9AA1C04E211362DC0051E073 /* Controller */,
 				9AA1C02121135EA60051E073 /* AppDelegate.h */,
 				9AA1C02221135EA60051E073 /* AppDelegate.m */,
 				9AA1C02421135EA70051E073 /* Assets.xcassets */,
@@ -124,6 +130,16 @@
 				9AA1C04221135EA80051E073 /* Info.plist */,
 			);
 			path = IssueAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+		9AA1C04E211362DC0051E073 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9AA1C04F2113630F0051E073 /* MainWindowController.h */,
+				9AA1C0502113630F0051E073 /* MainWindowController.m */,
+				9AA1C0512113630F0051E073 /* MainWindowController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA1C02521135EA70051E073 /* Assets.xcassets in Resources */,
+				9AA1C0532113630F0051E073 /* MainWindowController.xib in Resources */,
 				9AA1C02821135EA70051E073 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA1C0522113630F0051E073 /* MainWindowController.m in Sources */,
 				9AA1C02B21135EA70051E073 /* main.m in Sources */,
 				9AA1C02321135EA60051E073 /* AppDelegate.m in Sources */,
 			);
