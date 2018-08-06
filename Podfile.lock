@@ -1,0 +1,16 @@
+PODS:
+  - RegExCategories (1.0)
+
+DEPENDENCIES:
+  - RegExCategories (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RegExCategories
+
+SPEC CHECKSUMS:
+  RegExCategories: e68befacacd5bda853c88f70ec745cb2d0cfb89c
+
+PODFILE CHECKSUM: 5941ec07ced177c802ee732e7e4104f053d53d56
+
+COCOAPODS: 1.5.3

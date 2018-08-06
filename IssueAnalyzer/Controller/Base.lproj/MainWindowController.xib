@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
             <connections>
+                <outlet property="analyzeButton" destination="v5y-hc-H3K" id="41Q-L6-RAv"/>
                 <outlet property="dragDropView" destination="bTE-bE-Soc" id="vk6-N3-WQP"/>
                 <outlet property="filePathLabel" destination="J9E-RQ-ieF" id="HpS-5T-7H3"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
@@ -37,13 +39,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZpP-Oi-zYN">
-                                <rect key="frame" x="-6" y="27" width="538" height="32"/>
-                                <buttonCell key="cell" type="push" title="Click to Select File" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5w8-a2-GBA">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n8n-yh-gFx">
                                 <rect key="frame" x="-2" y="95" width="530" height="36"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop file here" id="h2I-wC-yvj">
@@ -52,33 +47,42 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZpP-Oi-zYN">
+                                <rect key="frame" x="187" y="28" width="152" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="upM-qo-Wuu"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Click to Select File" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5w8-a2-GBA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="deG-4y-YlM" secondAttribute="trailing" id="2sW-KA-zjT"/>
                             <constraint firstItem="n8n-yh-gFx" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" id="4fy-Fp-EZb"/>
-                            <constraint firstItem="ZpP-Oi-zYN" firstAttribute="top" secondItem="deG-4y-YlM" secondAttribute="bottom" constant="10" id="AiC-b7-t4G"/>
                             <constraint firstAttribute="height" constant="150" id="Dki-zy-awK"/>
                             <constraint firstItem="deG-4y-YlM" firstAttribute="centerY" secondItem="bTE-bE-Soc" secondAttribute="centerY" id="IWc-cW-pbo"/>
-                            <constraint firstItem="ZpP-Oi-zYN" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" id="IgS-SQ-gsW"/>
                             <constraint firstAttribute="trailing" secondItem="n8n-yh-gFx" secondAttribute="trailing" id="Ioh-hR-ZUA"/>
                             <constraint firstItem="deG-4y-YlM" firstAttribute="top" secondItem="n8n-yh-gFx" secondAttribute="bottom" constant="10" id="bih-eL-oan"/>
+                            <constraint firstItem="ZpP-Oi-zYN" firstAttribute="centerX" secondItem="bTE-bE-Soc" secondAttribute="centerX" id="hbz-Of-gHr"/>
                             <constraint firstItem="deG-4y-YlM" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" id="j2M-tt-t6P"/>
-                            <constraint firstAttribute="trailing" secondItem="ZpP-Oi-zYN" secondAttribute="trailing" id="sF7-4I-elf"/>
+                            <constraint firstItem="ZpP-Oi-zYN" firstAttribute="top" secondItem="deG-4y-YlM" secondAttribute="bottom" constant="10" id="oZ9-Pl-rJm"/>
                         </constraints>
                     </customView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sgU-wN-9YA">
                         <rect key="frame" x="18" y="275" width="530" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="file" id="J9E-RQ-ieF">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="J9E-RQ-ieF">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v5y-hc-H3K">
-                        <rect key="frame" x="20" y="246" width="526" height="19"/>
-                        <buttonCell key="cell" type="roundRect" title="分析结果" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8qI-yo-dv3">
+                        <rect key="frame" x="14" y="237" width="538" height="32"/>
+                        <buttonCell key="cell" type="push" title="分析结果" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8qI-yo-dv3">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" size="12" name=".PingFangSC-Regular"/>
+                            <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
                             <action selector="analyzeAction:" target="-2" id="nLP-qd-TFP"/>
