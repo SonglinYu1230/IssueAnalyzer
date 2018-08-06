@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  IssueAnalyzer
+
+  Created by yusonglin on 2018/8/6.
+  Copyright © 2018 yu. All rights reserved.
+*/
+
+"mainWindowTitle" = "警告分析";
