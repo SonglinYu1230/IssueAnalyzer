@@ -7,3 +7,8 @@
 */
 
 "mainWindowTitle" = "Warning Analysis";
+"analyzing" = "Analyzing";
+"analyze" = "Click to Analyze";
+"select" = "Select";
+"selectTip" = "Please choose build log file !";
+"resultLocationPrefix" = "Result location: ";

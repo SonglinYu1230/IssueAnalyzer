@@ -61,16 +61,4 @@
     return result;
 }
 
-#pragma mark - NSDraggingSource Delegate
-
-//- (NSDragOperation)draggingSession:(NSDraggingSession *)session sourceOperationMaskForDraggingContext:(NSDraggingContext)context {
-//    return nil;
-//}
-
-#pragma mark - NSPasteboardItemDataProvider Delegate
-
-- (void)pasteboard:(nullable NSPasteboard *)pasteboard item:(NSPasteboardItem *)item provideDataForType:(NSPasteboardType)type {
-    
-}
-
 @end

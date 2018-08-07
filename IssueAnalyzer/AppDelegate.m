@@ -23,8 +23,8 @@
     [self.mainWindowController showWindow:self];
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)application {
+    return YES;
 }
 
 @end

@@ -10,7 +10,7 @@
             <connections>
                 <outlet property="analyzeButton" destination="v5y-hc-H3K" id="41Q-L6-RAv"/>
                 <outlet property="dragDropView" destination="bTE-bE-Soc" id="vk6-N3-WQP"/>
-                <outlet property="filePathLabel" destination="J9E-RQ-ieF" id="HpS-5T-7H3"/>
+                <outlet property="filePathLabel" destination="1Uy-iV-h0v" id="sbc-aI-KXZ"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -19,14 +19,14 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="566" height="462"/>
+            <rect key="contentRect" x="196" y="240" width="566" height="226"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="566" height="462"/>
+                <rect key="frame" x="0.0" y="0.0" width="566" height="226"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="bTE-bE-Soc" customClass="DragDropView">
-                        <rect key="frame" x="20" y="302" width="526" height="150"/>
+                        <rect key="frame" x="20" y="61" width="526" height="150"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="deG-4y-YlM">
                                 <rect key="frame" x="-2" y="65" width="530" height="20"/>
@@ -41,7 +41,7 @@
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n8n-yh-gFx">
                                 <rect key="frame" x="-2" y="95" width="530" height="36"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop file here" id="h2I-wC-yvj">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop text file here" id="h2I-wC-yvj">
                                     <font key="font" metaFont="system" size="30"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -56,30 +56,36 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="chooseFileAction:" target="-2" id="m4E-Ed-TCa"/>
+                                </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u22-kK-xng">
+                                <rect key="frame" x="18" y="8" width="490" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="1Uy-iV-h0v">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u22-kK-xng" secondAttribute="trailing" constant="20" id="17O-Vw-k0l"/>
                             <constraint firstAttribute="trailing" secondItem="deG-4y-YlM" secondAttribute="trailing" id="2sW-KA-zjT"/>
                             <constraint firstItem="n8n-yh-gFx" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" id="4fy-Fp-EZb"/>
                             <constraint firstAttribute="height" constant="150" id="Dki-zy-awK"/>
                             <constraint firstItem="deG-4y-YlM" firstAttribute="centerY" secondItem="bTE-bE-Soc" secondAttribute="centerY" id="IWc-cW-pbo"/>
                             <constraint firstAttribute="trailing" secondItem="n8n-yh-gFx" secondAttribute="trailing" id="Ioh-hR-ZUA"/>
+                            <constraint firstItem="u22-kK-xng" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" constant="20" id="KcK-e5-gek"/>
+                            <constraint firstItem="u22-kK-xng" firstAttribute="top" secondItem="ZpP-Oi-zYN" secondAttribute="bottom" constant="10" id="TVb-hG-2fC"/>
                             <constraint firstItem="deG-4y-YlM" firstAttribute="top" secondItem="n8n-yh-gFx" secondAttribute="bottom" constant="10" id="bih-eL-oan"/>
                             <constraint firstItem="ZpP-Oi-zYN" firstAttribute="centerX" secondItem="bTE-bE-Soc" secondAttribute="centerX" id="hbz-Of-gHr"/>
                             <constraint firstItem="deG-4y-YlM" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" id="j2M-tt-t6P"/>
                             <constraint firstItem="ZpP-Oi-zYN" firstAttribute="top" secondItem="deG-4y-YlM" secondAttribute="bottom" constant="10" id="oZ9-Pl-rJm"/>
                         </constraints>
                     </customView>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sgU-wN-9YA">
-                        <rect key="frame" x="18" y="275" width="530" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="J9E-RQ-ieF">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v5y-hc-H3K">
-                        <rect key="frame" x="14" y="237" width="538" height="32"/>
+                        <rect key="frame" x="14" y="13" width="538" height="32"/>
                         <buttonCell key="cell" type="push" title="分析结果" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8qI-yo-dv3">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -90,21 +96,18 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="v5y-hc-H3K" firstAttribute="top" secondItem="sgU-wN-9YA" secondAttribute="bottom" constant="10" id="7Gi-zN-ck4"/>
-                    <constraint firstItem="sgU-wN-9YA" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" id="BeL-VZ-o6C"/>
-                    <constraint firstItem="sgU-wN-9YA" firstAttribute="top" secondItem="bTE-bE-Soc" secondAttribute="bottom" constant="10" id="Gjw-ca-XOg"/>
+                    <constraint firstItem="v5y-hc-H3K" firstAttribute="trailing" secondItem="bTE-bE-Soc" secondAttribute="trailing" id="EHX-7N-ayt"/>
+                    <constraint firstItem="v5y-hc-H3K" firstAttribute="leading" secondItem="bTE-bE-Soc" secondAttribute="leading" id="MRn-eW-5Dw"/>
                     <constraint firstAttribute="trailing" secondItem="bTE-bE-Soc" secondAttribute="trailing" constant="20" id="U5Q-wj-fv6"/>
                     <constraint firstItem="bTE-bE-Soc" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="UWA-H9-1VT"/>
-                    <constraint firstItem="bTE-bE-Soc" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="10" id="WYa-6Q-kB3"/>
-                    <constraint firstItem="v5y-hc-H3K" firstAttribute="trailing" secondItem="sgU-wN-9YA" secondAttribute="trailing" id="ZFy-gM-2Vk"/>
-                    <constraint firstItem="sgU-wN-9YA" firstAttribute="trailing" secondItem="bTE-bE-Soc" secondAttribute="trailing" id="giw-BA-qMt"/>
-                    <constraint firstItem="v5y-hc-H3K" firstAttribute="leading" secondItem="sgU-wN-9YA" secondAttribute="leading" id="jvu-Pu-l94"/>
+                    <constraint firstItem="bTE-bE-Soc" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="15" id="WYa-6Q-kB3"/>
+                    <constraint firstItem="v5y-hc-H3K" firstAttribute="top" secondItem="bTE-bE-Soc" secondAttribute="bottom" constant="20" id="aMP-cZ-Oai"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="102" y="142"/>
+            <point key="canvasLocation" x="102" y="24"/>
         </window>
     </objects>
 </document>

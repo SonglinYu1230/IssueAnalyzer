@@ -7,3 +7,8 @@
 */
 
 "mainWindowTitle" = "警告分析";
+"analyzing" = "分析结果中";
+"analyze" = "开始分析";
+"select" = "选择";
+"selectTip" = "请选择编译日志文件";
+"resultLocationPrefix" = "分析结果: ";
